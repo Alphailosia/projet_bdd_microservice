@@ -1,6 +1,7 @@
 package com.course.cart;
 
 import com.course.cart.model.Cart;
+import com.course.cart.model.CartItem;
 import com.course.cart.repository.CartItemRepository;
 import com.course.cart.repository.CartRepository;
 import org.springframework.beans.factory.annotation.Autowired;

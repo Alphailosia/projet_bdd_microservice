@@ -1,4 +1,4 @@
-package com.course.cart.model;
+package com.course.cart;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

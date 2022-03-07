@@ -1,22 +1,15 @@
-package com.course.cart;
+package com.example.client.beans;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+public class CartItemBean {
 
-@Entity
-public class CartItem {
-
-    @Id
-    @GeneratedValue
     private Long id;
 
     private Long productId;
     private Integer quantity;
 
-    public CartItem(){}
+    public CartItemBean(){}
 
-    public CartItem(Long id, Long productId, Integer quantity) {
+    public CartItemBean(Long id, Long productId, Integer quantity) {
         this.id = id;
         this.productId = productId;
         this.quantity = quantity;

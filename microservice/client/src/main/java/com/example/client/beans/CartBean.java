@@ -1,21 +1,16 @@
-package com.course.cart.model;
+package com.example.client.beans;
 
-import javax.persistence.*;
 import java.util.List;
 
-@Entity
-public class Cart {
+public class CartBean {
 
-    @Id
-    @GeneratedValue
     private Long id;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    List<CartItem> products;
+    List<CartItemBean> products;
 
-    public Cart(){}
+    public CartBean(){}
 
-    public Cart(Long id, List<CartItem> products) {
+    public CartBean(Long id, List<CartItemBean> products) {
         this.id = id;
         this.products = products;
     }
@@ -28,11 +23,11 @@ public class Cart {
         this.id = id;
     }
 
-    public List<CartItem> getProducts() {
+    public List<CartItemBean> getProducts() {
         return products;
     }
 
-    public void setProducts(List<CartItem> products) {
+    public void setProducts(List<CartItemBean> products) {
         this.products = products;
     }
 
@@ -44,7 +39,7 @@ public class Cart {
                 '}';
     }
 
-    public void addProduct(CartItem cartItem) {
+    public void addProduct(CartItemBean cartItem) {
         this.products.add(cartItem);
     }
 }

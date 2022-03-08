@@ -1,4 +1,5 @@
-package com.course.cart.model;
+package com.example.cart.model;
+
 
 import javax.persistence.*;
 import java.util.List;

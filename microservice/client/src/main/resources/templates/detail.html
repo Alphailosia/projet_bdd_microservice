@@ -6,16 +6,25 @@
 </head>
 <body>
 <div class="container">
-    <h1>
+    <div>
         <a th:href="@{|/|}">
             <img src="https://img2.freepng.fr/20180602/zc/kisspng-home-logo-marc-ronan-sales-representative-owner-c-arab-house-5b12f27985e999.1495639715279683775485.jpg" class="card-img-top" width="50px" high="50px"/>
         </a>
-        &nbsp&nbsp&nbsp&nbsp&nbsp Microservice Client eCommerce</h1>
+        <a th:href="@{|/cart|}">
+            <img src="https://e7.pngegg.com/pngimages/18/45/png-clipart-e-commerce-shopping-cart-online-shopping-shopping-cart-decoration-angle-logo.png" class="card-img-top" width="50px" high="50px"/>
+        </a>
+    </div>
+    <h1>Microservice Client eCommerce</h1>
     <div class="row">
         <h1 th:text="${product.name}"></h1>
         <p th:text="${product.description}"></p>
         <img th:src="${product.illustration}" class="card-img-top" width="100px" high="100px"/>
+        <div>
+            <form th:action="@{|/addCart/${product.id}|}">
+                <input type="submit" name="ajoupanier" value="Ajouter au panier">
+            </form>
 
+        </div>
     </div>
 </div>
 </body>

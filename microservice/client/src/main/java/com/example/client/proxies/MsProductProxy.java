@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "ms-client", url="localhost:8091")
+@FeignClient(name = "ms-product", url="localhost:8091")
 public interface MsProductProxy {
 
     @GetMapping("/products")

@@ -17,8 +17,7 @@ public class CartItem {
 
     public CartItem(){}
 
-    public CartItem(Long id, Long productId, Integer quantity) {
-        this.id = id;
+    public CartItem(Long productId, Integer quantity) {
         this.productId = productId;
         this.quantity = quantity;
     }

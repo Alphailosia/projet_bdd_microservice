@@ -31,14 +31,15 @@ public class CartController {
         return new ResponseEntity<Cart>(cart, HttpStatus.CREATED);
     }
 
-    @GetMapping(value = "/cart/{id}")public Optional<Cart> getCart(@PathVariable Long id){
+    @GetMapping("/cart/{id}")
+    public Optional<Cart> getCart(@PathVariable Long id){
         Optional<Cart> cart = cartRepository.findById(id);
         if (cart == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Couldn't get cart");
         return cart;
     }
 
-    @PostMapping(value = "/cart/{id}")
+    @PostMapping("/cart/{id}")
     @Transactional
     public ResponseEntity<CartItem> addProductToCart(@PathVariable Long id, @RequestBody CartItem cartItem){
         Cart cart = cartRepository.getOne(id);

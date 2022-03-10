@@ -2,25 +2,14 @@ package com.example.client.beans;
 
 public class CartItemBean {
 
-    private Long id;
-
     private Long productId;
     private Integer quantity;
 
     public CartItemBean(){}
 
-    public CartItemBean(Long id, Long productId, Integer quantity) {
-        this.id = id;
+    public CartItemBean(Long productId, Integer quantity) {
         this.productId = productId;
         this.quantity = quantity;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Long getProductId() {
@@ -42,7 +31,6 @@ public class CartItemBean {
     @Override
     public String toString() {
         return "CartItem{" +
-                "id=" + id +
                 ", productId=" + productId +
                 ", quantity=" + quantity +
                 '}';

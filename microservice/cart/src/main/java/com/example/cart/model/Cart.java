@@ -16,8 +16,7 @@ public class Cart {
 
     public Cart(){}
 
-    public Cart(Long id, List<CartItem> products) {
-        this.id = id;
+    public Cart(List<CartItem> products) {
         this.products = products;
     }
 

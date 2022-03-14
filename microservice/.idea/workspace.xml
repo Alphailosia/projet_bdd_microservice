@@ -6,18 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4e3d52ad-dff4-45c6-bf71-9ebb7e561efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/CartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/model/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/model/CartItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/client/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/client/beans/CartItemBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/client/beans/CartItemBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/client/proxies/MsCartProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/client/proxies/MsCartProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/client/proxies/MsProductProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/client/proxies/MsProductProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +121,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.client [dependencies]">
+  <component name="RunManager" selected="Spring Boot.client">
     <configuration name="client [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -177,34 +169,13 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/client" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
             <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="order [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/order" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -239,16 +210,21 @@
       <module name="cart.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.cart.CartApplication" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="corretto-1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="client" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="client" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="client.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.client.ClientApplication" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="corretto-1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -264,30 +240,28 @@
     <configuration name="product" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="product.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.course.product.ProductApplication" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="corretto-1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.order [clean]" />
       <item itemvalue="Gradle.order [dependencies]" />
-      <item itemvalue="Spring Boot.product" />
-      <item itemvalue="Spring Boot.cart" />
-      <item itemvalue="Spring Boot.client" />
       <item itemvalue="Gradle.client [clean]" />
       <item itemvalue="Gradle.client [build]" />
       <item itemvalue="Gradle.client [dependencies]" />
+      <item itemvalue="Spring Boot.product" />
+      <item itemvalue="Spring Boot.cart" />
       <item itemvalue="Spring Boot.order" />
+      <item itemvalue="Spring Boot.client" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.client" />
         <item itemvalue="Gradle.client [dependencies]" />
         <item itemvalue="Gradle.client [build]" />
         <item itemvalue="Gradle.client [clean]" />
         <item itemvalue="Gradle.order [dependencies]" />
-        <item itemvalue="Gradle.order [clean]" />
       </list>
     </recent_temporary>
   </component>

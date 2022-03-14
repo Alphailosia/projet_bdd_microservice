@@ -60,16 +60,15 @@ public class ClientController {
 
     @RequestMapping({"/addCart/{id}"})
     public String addItemCart(Model model,@PathVariable Long id){
-        ResponseEntity<CartBean> cart = msCartProxy.createNewCart();
-        System.out.println(cartBean);
         if(cartBean==null){
+            ResponseEntity<CartBean> cart = msCartProxy.createNewCart();
             cartBean = cart.getBody();
         }
 
        msCartProxy.addProductToCart(cartBean.getId(),new CartItemBean(id,1));
 
         cartBean = msCartProxy.getCart(cartBean.getId()).get();
-
+        System.out.println(cartBean);
         List<ProductBean> products = msProductProxy.list();
         model.addAttribute("products", products);
         return "index";

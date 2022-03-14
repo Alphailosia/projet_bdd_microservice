@@ -45,6 +45,29 @@ public class Cart {
     }
 
     public void addProduct(CartItem cartItem) {
-        this.products.add(cartItem);
+        boolean isInCart = inCart(cartItem);
+        if(isInCart){
+            addQuantity(cartItem);
+        }
+        else{
+            this.products.add(cartItem);
+        }
+    }
+
+    private void addQuantity(CartItem cartItem) {
+        for(int i=0;i<this.products.size();i++){
+            if(this.products.get(i).getProductId().equals(cartItem.getProductId())){
+                this.products.get(i).setQuantity(this.products.get(i).getQuantity()+1);
+            }
+        }
+    }
+
+    private boolean inCart(CartItem cartItem) {
+        for(int i=0;i<this.products.size();i++){
+            if(this.products.get(i).getProductId().equals(cartItem.getProductId())){
+                return true;
+            }
+        }
+        return false;
     }
 }

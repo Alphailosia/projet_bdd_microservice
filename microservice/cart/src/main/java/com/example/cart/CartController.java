@@ -43,6 +43,7 @@ public class CartController {
     @Transactional
     public ResponseEntity<CartItem> addProductToCart(@PathVariable Long id, @RequestBody CartItem cartItem){
         Cart cart = cartRepository.getById(id);
+
         if (cart == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Couldn't get cart");
 

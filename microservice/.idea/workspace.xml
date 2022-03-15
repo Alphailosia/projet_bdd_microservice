@@ -7,9 +7,8 @@
     <list default="true" id="4e3d52ad-dff4-45c6-bf71-9ebb7e561efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/client/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +209,7 @@
       <module name="cart.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.cart.CartApplication" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-1.8" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -280,6 +279,7 @@
       <workItem from="1646736407521" duration="300000" />
       <workItem from="1646916679102" duration="810000" />
       <workItem from="1646917572766" duration="6959000" />
+      <workItem from="1647368226239" duration="1024000" />
     </task>
     <servers />
   </component>

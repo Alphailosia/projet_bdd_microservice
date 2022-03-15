@@ -1,5 +1,5 @@
 INSERT INTO product(id,name, description, illustration, price)
-values (0, 'Produit0', 'description produit 0','https://images.squarespace-cdn.com/content/v1/576c0682f5e231d654cf661c/1528449391201-4OIJK4NQYFQTD8Y102W2/shopping-cart.png',9.9),
+values (0, 'Pop Dr Strange', ' (description) Pop Dr Strange #meilleursuperheros','https://cdn.idealo.com/folder/Product/201631/5/201631590/s4_produktbild_gross/funko-pop-marvel-what-if-doctor-strange-supreme.jpg',9.9),
        (1, 'Produit1', 'description produit 1','https://images.squarespace-cdn.com/content/v1/576c0682f5e231d654cf661c/1528449391201-4OIJK4NQYFQTD8Y102W2/shopping-cart.png',9.9),
        (2, 'Produit2', 'description produit 2','https://images.squarespace-cdn.com/content/v1/576c0682f5e231d654cf661c/1528449391201-4OIJK4NQYFQTD8Y102W2/shopping-cart.png',9.9),
        (3, 'Produit3', 'description produit 3','https://images.squarespace-cdn.com/content/v1/576c0682f5e231d654cf661c/1528449391201-4OIJK4NQYFQTD8Y102W2/shopping-cart.png',9.9),

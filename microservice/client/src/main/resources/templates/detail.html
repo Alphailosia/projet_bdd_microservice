@@ -19,6 +19,7 @@
         <h1 th:text="${product.name}"></h1>
         <p th:text="${product.description}"></p>
         <img th:src="${product.illustration}" class="card-img-top" width="100px" high="100px"/>
+        <p th:text="${product.price}"></p>
         <div>
             <form th:action="@{|/addCart/${product.id}|}">
                 <input type="submit" name="ajoupanier" value="Ajouter au panier">

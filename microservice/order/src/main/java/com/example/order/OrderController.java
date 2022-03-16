@@ -43,7 +43,8 @@ public class OrderController {
     @PostMapping("/order/{id}")
     @Transactional
     public Optional<Order> saveOrder(@PathVariable Long id, @RequestBody Order order){
-        Order resOrder = orderRepository.getById(id);
+        System.out.println(id);
+        Order resOrder = orderRepository.findById(id).get();
 
         resOrder.setCartId(order.getCartId());
 

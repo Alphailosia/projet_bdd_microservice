@@ -4,13 +4,15 @@ public class OrderItemBean {
 
     private Long id;
 
-    private int quantity;
-    private double price;
+    private Integer quantity;
+    private Float price;
+    private Float totalPrice;
 
-    public OrderItemBean(Long id, int quantity, double price) {
+    public OrderItemBean(Long id, Integer quantity, Float price) {
         this.id = id;
         this.quantity = quantity;
         this.price = price;
+        this.totalPrice = this.quantity*this.price;
     }
 
     public OrderItemBean(){}
@@ -23,20 +25,28 @@ public class OrderItemBean {
         this.id = id;
     }
 
-    public int getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
-    public double getPrice() {
+    public Float getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Float price) {
         this.price = price;
+    }
+
+    public Float getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(Float totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
     @Override

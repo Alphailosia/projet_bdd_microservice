@@ -1,9 +1,6 @@
 package com.example.client;
 
-import com.example.client.beans.CartBean;
-import com.example.client.beans.CartItemBean;
-import com.example.client.beans.OrderBean;
-import com.example.client.beans.ProductBean;
+import com.example.client.beans.*;
 import com.example.client.proxies.MsCartProxy;
 import com.example.client.proxies.MsOrderProxy;
 import com.example.client.proxies.MsProductProxy;
@@ -87,7 +84,7 @@ public class ClientController {
         return "index";
     }
 
-    @RequestMapping("/order")
+    @RequestMapping("/orderPage")
     public String order(Model model){
         if(orderBean==null){
             ResponseEntity<OrderBean> order = msOrderProxy.createNewOrder();
@@ -95,14 +92,20 @@ public class ClientController {
         }
 
         if(cartBean!=null){
+            System.out.println(orderBean);
             orderBean.setCartId(cartBean.getId());
-            msOrderProxy.saveOrder(orderBean.getId(),orderBean);
+            orderBean = msOrderProxy.saveOrder(orderBean.getId(),orderBean).get();
         }
 
-        if(!cartBean.getProducts().isEmpty())
-            model.addAttribute("products", cartBean.getProducts());
-        else
-            model.addAttribute("products", new ArrayList<CartItemBean>());
+        List<OrderItemBean> products = new ArrayList<OrderItemBean>();
+        if(!cartBean.getProducts().isEmpty()){
+            for(int i=0;i<cartBean.getProducts().size();i++){
+                ProductBean product = msProductProxy.get(cartBean.getProducts().get(i).getProductId());
+                products.add(new OrderItemBean(cartBean.getProducts().get(i).getProductId(),cartBean.getProducts().get(i).getQuantity(),product.getPrice()));
+            }
+        }
+        orderBean.calculeTotal(products);
+        model.addAttribute("products",products);
 
         model.addAttribute("order",orderBean);
 

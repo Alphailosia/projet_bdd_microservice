@@ -17,12 +17,12 @@ public class Product {
     private String description;
     private String illustration;
 
-    private double price;
+    private Float price;
 
     public Product() {
     }
 
-    public Product(Long id, String name, String description, String illustration, double price) {
+    public Product(Long id, String name, String description, String illustration, Float price) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -54,11 +54,11 @@ public class Product {
         this.illustration = illustration;
     }
 
-    public double getPrice() {
+    public Float getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Float price) {
         this.price = price;
     }
 

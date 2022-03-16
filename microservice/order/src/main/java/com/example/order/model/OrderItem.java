@@ -14,6 +14,7 @@ public class OrderItem {
 
     private Integer quantity;
     private Float price;
+    private Float totalPrice;
 
     public OrderItem(Long id, Integer quantity, Float price) {
         this.id = id;
@@ -31,11 +32,11 @@ public class OrderItem {
         this.id = id;
     }
 
-    public int getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
@@ -45,6 +46,14 @@ public class OrderItem {
 
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    public Float getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(Float totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
     @Override

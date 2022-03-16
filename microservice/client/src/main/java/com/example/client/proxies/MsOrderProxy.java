@@ -1,12 +1,12 @@
 package com.example.client.proxies;
 
 import com.example.client.beans.OrderBean;
-import org.aspectj.weaver.ast.Or;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Optional;
 
@@ -20,6 +20,6 @@ public interface MsOrderProxy {
     public Optional<OrderBean> getOrder(@PathVariable Long id);
 
     @PostMapping("/order/{id}")
-    public Optional<OrderBean> saveOrder(@PathVariable Long id, OrderBean orderBean);
+    public Optional<OrderBean> saveOrder(@PathVariable Long id,@RequestBody OrderBean orderBean);
 
 }

@@ -12,7 +12,7 @@ public class Order {
     private Long id;
 
     private Long cartId;
-    private Double total;
+    private Float total;
 
     public Order(){}
 
@@ -32,11 +32,11 @@ public class Order {
         this.cartId = cartId;
     }
 
-    public double getTotal() {
+    public Float getTotal() {
         return total;
     }
 
-    public void setTotal(double total) {
+    public void setTotal(Float total) {
         this.total = total;
     }
 

@@ -7,13 +7,18 @@
     <list default="true" id="4e3d52ad-dff4-45c6-bf71-9ebb7e561efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/client/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/client/beans/OrderBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/client/beans/OrderBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/client/beans/OrderItemBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/client/beans/OrderItemBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/client/beans/ProductBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/client/beans/ProductBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/client/proxies/MsOrderProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/client/proxies/MsOrderProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/src/main/java/com/example/order/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/com/example/order/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/src/main/java/com/example/order/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/com/example/order/model/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/src/main/java/com/example/order/model/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/com/example/order/model/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/course/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/course/product/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +240,7 @@
       </method>
     </configuration>
     <configuration name="order" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="order.main" />
+      <module name="com.example.order.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.order.OrderApplication" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-1.8" />
@@ -288,6 +293,7 @@
       <workItem from="1646917572766" duration="6959000" />
       <workItem from="1647368226239" duration="5165000" />
       <workItem from="1647418251299" duration="13874000" />
+      <workItem from="1647457520812" duration="4314000" />
     </task>
     <servers />
   </component>

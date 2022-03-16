@@ -1,14 +1,16 @@
 package com.example.client.beans;
 
+import java.util.List;
+
 public class OrderBean {
     private Long id;
 
     private Long cartId;
-    private double total;
+    private Float total;
 
     public OrderBean(){}
 
-    public OrderBean(Long id, Long cartId, double total) {
+    public OrderBean(Long id, Long cartId, Float total) {
         this.id = id;
         this.cartId = cartId;
         this.total = total;
@@ -30,13 +32,22 @@ public class OrderBean {
         this.cartId = cartId;
     }
 
-    public double getTotal() {
+    public Float getTotal() {
         return total;
     }
 
-    public void setTotal(double total) {
+    public void setTotal(Float total) {
         this.total = total;
     }
+
+    public void calculeTotal(List<OrderItemBean> products) {
+        Float total = new Float(0);
+        for(OrderItemBean o : products){
+            total+= o.getTotalPrice();
+        }
+        this.total = total;
+    }
+
 
     @Override
     public String toString() {

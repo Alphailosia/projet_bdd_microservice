@@ -6,10 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="4e3d52ad-dff4-45c6-bf71-9ebb7e561efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/client/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/src/main/java/com/example/order/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/com/example/order/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/src/main/java/com/example/order/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/com/example/order/model/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/src/main/java/com/example/order/model/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/com/example/order/model/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,8 +77,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
         <option value="HTML File" />
       </list>
     </option>
@@ -94,6 +98,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="h2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
@@ -230,9 +235,10 @@
       </method>
     </configuration>
     <configuration name="order" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="com.example.order.main" />
+      <module name="order.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.order.OrderApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-1.8" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -250,9 +256,9 @@
       <item itemvalue="Gradle.client [clean]" />
       <item itemvalue="Gradle.client [build]" />
       <item itemvalue="Gradle.client [dependencies]" />
+      <item itemvalue="Spring Boot.order" />
       <item itemvalue="Spring Boot.product" />
       <item itemvalue="Spring Boot.cart" />
-      <item itemvalue="Spring Boot.order" />
       <item itemvalue="Spring Boot.client" />
     </list>
     <recent_temporary>
@@ -281,6 +287,7 @@
       <workItem from="1646916679102" duration="810000" />
       <workItem from="1646917572766" duration="6959000" />
       <workItem from="1647368226239" duration="5165000" />
+      <workItem from="1647418251299" duration="13874000" />
     </task>
     <servers />
   </component>

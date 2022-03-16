@@ -1,20 +1,18 @@
-package com.example.order.model;
+package com.example.client.beans;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-@Entity(name="commande")
-public class Order {
-
-    @Id
-    @GeneratedValue
+public class OrderBean {
     private Long id;
 
     private Long cartId;
-    private Double total;
+    private double total;
 
-    public Order(){}
+    public OrderBean(){}
+
+    public OrderBean(Long id, Long cartId, double total) {
+        this.id = id;
+        this.cartId = cartId;
+        this.total = total;
+    }
 
     public Long getId() {
         return id;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Les SOSSUR</title>
 </head>
 <body>
 <div>
@@ -17,12 +17,14 @@
     </a>
 </div>
 <h1>
-  Panier de yoplait
+    Commande n°<span th:text="${order.id}"></span>
 </h1>
-
 <div>
-    <div th:each="product : ${cartBean.products}" class="col-md-4 my-1">
-            <p>Id : <span th:text= "${product.productId}"></span>, quantité : <span th:text= "${product.quantity}"></span></p>
+    <h2>
+        Produits :
+    </h2>
+    <div th:each="product : ${products}" class="col-md-4 my-1">
+        <p>Id : <span th:text= "${product.productId}"></span>, quantité : <span th:text= "${product.quantity}"></span></p>
     </div>
 </div>
 

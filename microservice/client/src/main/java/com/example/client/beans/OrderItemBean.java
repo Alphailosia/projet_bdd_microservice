@@ -1,27 +1,19 @@
-package com.example.order.model;
+package com.example.client.beans;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+public class OrderItemBean {
 
-@Entity(name="produitcommande")
-public class OrderItem {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Integer quantity;
-    private Float price;
+    private int quantity;
+    private double price;
 
-    public OrderItem(Long id, Integer quantity, Float price) {
+    public OrderItemBean(Long id, int quantity, double price) {
         this.id = id;
         this.quantity = quantity;
         this.price = price;
     }
 
-    public OrderItem(){}
+    public OrderItemBean(){}
 
     public Long getId() {
         return id;
@@ -39,11 +31,11 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
-    public Float getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

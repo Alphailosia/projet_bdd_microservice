@@ -1,4 +1,28 @@
     h1 {
         text-align: center;
-        margin: 50px;
+        margin-top: 50px;
+        margin-bottom: 150px;
+        font-size: 4em;
     }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .menu {
+        margin: 5px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    

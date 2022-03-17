@@ -52,4 +52,16 @@ public class CartController {
         return new ResponseEntity<CartItem>(cartItem, HttpStatus.CREATED);
     }
 
+    @PostMapping("/cartd/{id}")
+    @Transactional
+    public ResponseEntity<Cart> deleteProductsFromCart(@PathVariable Long id, @RequestBody Cart cart){
+        Cart cart1 = cartRepository.getById(id);
+
+        cart1.setProducts(cart.getProducts());
+
+        cartRepository.save(cart1);
+
+        return new ResponseEntity<Cart>(cart, HttpStatus.CREATED);
+    }
+
 }

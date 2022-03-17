@@ -54,4 +54,13 @@ public class OrderController {
 
         return res;
     }
+
+    @DeleteMapping("/order/{id}")
+    public boolean deleteOrder(@PathVariable Long id){
+        Order order = orderRepository.findById(id).get();
+
+        orderRepository.delete(order);
+
+        return true;
+    }
 }

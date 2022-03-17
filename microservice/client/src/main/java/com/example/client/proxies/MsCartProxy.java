@@ -22,4 +22,7 @@ public interface MsCartProxy {
 
     @PostMapping(value = "/cart/{id}")
     public ResponseEntity<CartItemBean> addProductToCart(@PathVariable Long id, @RequestBody CartItemBean cartItem);
+
+    @PostMapping("/cartd/{id}")
+    public ResponseEntity<CartBean> deleteProductsFromCart(@PathVariable Long id, @RequestBody CartBean cartBean);
 }

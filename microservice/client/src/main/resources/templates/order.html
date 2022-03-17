@@ -38,6 +38,9 @@
     <h2>
         <span th:text="${order.total}"></span>€
     </h2>
+    <form th:action="@{|/pay|}">
+        <input type="submit" name="payer" value="Payer">
+    </form>
 </div>
 
 </body>

@@ -111,4 +111,18 @@ public class ClientController {
 
         return "order";
     }
+
+    @RequestMapping("/pay")
+    public String pay(Model model){
+
+        cartBean.setProducts(new ArrayList<CartItemBean>());
+        msCartProxy.deleteProductsFromCart(cartBean.getId(),cartBean);
+
+        msOrderProxy.deleteOrder(orderBean.getId());
+        orderBean = null;
+
+
+        return "confirmation";
+    }
+
 }

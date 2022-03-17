@@ -57,7 +57,7 @@ public class Cart {
     private void addQuantity(CartItem cartItem) {
         for(int i=0;i<this.products.size();i++){
             if(this.products.get(i).getProductId().equals(cartItem.getProductId())){
-                this.products.get(i).setQuantity(this.products.get(i).getQuantity()+1);
+                this.products.get(i).setQuantity(this.products.get(i).getQuantity()+cartItem.getQuantity());
             }
         }
     }

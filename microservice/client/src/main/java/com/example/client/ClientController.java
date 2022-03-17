@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -58,13 +59,16 @@ public class ClientController {
     @RequestMapping("/cart")
     public String cart(Model model){
         if(cartBean!=null){
-            model.addAttribute("cartBean", cartBean);
-            return "cart";
+            if(cartBean.getProducts().isEmpty()){
+                return "cartEmpty";
+            }
+            else{
+                model.addAttribute("cartBean", cartBean);
+                return "cart";
+            }
         }
         else{
-            List<ProductBean> products = msProductProxy.list();
-            model.addAttribute("products", products);
-            return "index";
+            return "cartEmpty";
         }
     }
 
@@ -107,6 +111,9 @@ public class ClientController {
         orderBean.calculeTotal(products);
         model.addAttribute("products",products);
 
+        cartBean.setProducts(new ArrayList<CartItemBean>());
+        msCartProxy.deleteProductsFromCart(cartBean.getId(),cartBean);
+
         model.addAttribute("order",orderBean);
 
         return "order";
@@ -115,14 +122,31 @@ public class ClientController {
     @RequestMapping("/pay")
     public String pay(Model model){
 
-        cartBean.setProducts(new ArrayList<CartItemBean>());
-        msCartProxy.deleteProductsFromCart(cartBean.getId(),cartBean);
-
         msOrderProxy.deleteOrder(orderBean.getId());
         orderBean = null;
 
-
         return "confirmation";
+    }
+
+    @GetMapping("/addOne/{id}")
+    public String addOne(@PathVariable Long id, Model model){
+        msCartProxy.addProductToCart(cartBean.getId(),new CartItemBean(id,1));
+
+        cartBean = msCartProxy.getCart(cartBean.getId()).get();
+
+        model.addAttribute("cartBean",cartBean);
+
+        return "cart";
+    }
+
+    @GetMapping("/retriveOne/{id}")
+    public String retriveOne(@PathVariable Long id, Model model){
+        msCartProxy.addProductToCart(cartBean.getId(),new CartItemBean(id,-1));
+
+        cartBean = msCartProxy.getCart(cartBean.getId()).get();
+
+        model.addAttribute("cartBean",cartBean);
+        return "cart";
     }
 
 }

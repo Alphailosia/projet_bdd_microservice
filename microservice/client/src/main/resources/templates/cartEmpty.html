@@ -18,18 +18,7 @@
 </h1>
 
 <div>
-    <div th:each="product : ${cartBean.products}" class="col-md-4 my-1">
-        <p>Id : <span th:text= "${product.productId}"></span>, quantité : <span th:text= "${product.quantity}"></span></p>
-        <form th:action="@{|/retriveOne/${product.productId}|}">
-            <input type="submit" name="validRet" value="-">
-        </form>
-        <form th:action="@{|/addOne/${product.productId}|}">
-            <input type="submit" name="validAdd" value="+">
-        </form>
-    </div>
-    <form th:action="@{|/orderPage|}">
-        <input type="submit" name="valid" value="Valider et commander">
-    </form>
+    Aucun produit dans le pannier
 </div>
 
 </body>

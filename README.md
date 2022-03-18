@@ -19,3 +19,4 @@ Christophe Santamaria
 En plus :  
 - Ajouter et enlever des produits directement dans le panier 
 - Amélioration design  
+- Connexion et déconnexion (login : testName, mdp : testPwd)  

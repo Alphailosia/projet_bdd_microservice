@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/authStyle.css}"/>
 </head>
 <body>
 <h1> Connexion</h1>
 
 <form th:action="@{/auth}" th:object="${userbean}" method="post">
-    <input type="text" required th:field="*{name}">
-    <input type="text" required th:field="*{password}">
-    <input type="submit" value="connexion">
+    <input placeholder="Login" type="text" required th:field="*{name}">
+    <br>
+    <input placeholder="Password" type="text" required th:field="*{password}">
+    <br>
+    <input class="button" type="submit" value="connexion">
 </form>
 </body>
 </html>

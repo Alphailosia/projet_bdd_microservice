@@ -25,28 +25,32 @@
 <h1>
     Commande n°<span th:text="${order.id}"></span>
 </h1>
-<div>
-    <h2>
+<div class="contenu">
+    <div class="produits">
+    <h2 class="titleP">
         Produits :
     </h2>
     <div th:each="product : ${products}" class="col-md-4 my-1">
         <p>
-            Id : <span th:text= "${product.id}"></span>,
-            quantité : <span th:text= "${product.quantity}"></span>,
-            prix unitaire : <span th:text="${product.price}"></span>€,
-            prix total : <span th:text="${product.totalPrice}"></span>€
+            Id : <span class="identifiant" th:text= "${product.id}"></span>
+            quantité : <span class="quantite" th:text= "${product.quantity}"></span>
+            prix unitaire : <span class="prix" th:text="${product.price}+'€'"></span>
+            prix total : <span class="prixtotal" th:text="${product.totalPrice}+'€'"></span>
         </p>
     </div>
-
+    </div>
+    <div class="total">
     <h2>
         Prix total :
     </h2>
     <h2>
-        <span th:text="${order.total}"></span>€
+        <span class="prixFinal" th:text="${order.total}"></span>€
     </h2>
+    </div>
     <form th:action="@{|/pay|}">
         <input type="submit" name="payer" value="Payer">
     </form>
+
 </div>
 
 </body>

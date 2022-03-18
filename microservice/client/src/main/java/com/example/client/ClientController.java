@@ -119,10 +119,12 @@ public class ClientController {
         }
 
         List<OrderItemBean> products = new ArrayList<OrderItemBean>();
-        if(!cartBean.getProducts().isEmpty()){
-            for(int i=0;i<cartBean.getProducts().size();i++){
-                ProductBean product = msProductProxy.get(cartBean.getProducts().get(i).getProductId());
-                products.add(new OrderItemBean(cartBean.getProducts().get(i).getProductId(),cartBean.getProducts().get(i).getQuantity(),product.getPrice()));
+        if(cartBean != null){
+            if(!cartBean.getProducts().isEmpty()){
+                for(int i=0;i<cartBean.getProducts().size();i++){
+                    ProductBean product = msProductProxy.get(cartBean.getProducts().get(i).getProductId());
+                    products.add(new OrderItemBean(cartBean.getProducts().get(i).getProductId(),cartBean.getProducts().get(i).getQuantity(),product.getPrice()));
+                }
             }
         }
         orderBean.calculeTotal(products);

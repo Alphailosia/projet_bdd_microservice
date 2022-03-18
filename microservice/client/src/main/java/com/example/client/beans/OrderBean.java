@@ -1,5 +1,6 @@
 package com.example.client.beans;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class OrderBean {
@@ -45,7 +46,10 @@ public class OrderBean {
         for(OrderItemBean o : products){
             total+= o.getTotalPrice();
         }
-        this.total = total;
+        DecimalFormat t = new DecimalFormat();
+        t.setMaximumFractionDigits(1);
+        String s = t.format(total).replaceAll(",","\\.");
+        this.total = Float.parseFloat(s);
     }
 
 

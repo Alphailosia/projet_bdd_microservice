@@ -146,6 +146,10 @@ public class ClientController {
         cartBean = msCartProxy.getCart(cartBean.getId()).get();
 
         model.addAttribute("cartBean",cartBean);
+
+        if(cartBean.getProducts().isEmpty()){
+            return "cartEmpty";
+        }
         return "cart";
     }
 

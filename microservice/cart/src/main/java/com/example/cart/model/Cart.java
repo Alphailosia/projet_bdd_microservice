@@ -59,6 +59,9 @@ public class Cart {
             if(this.products.get(i).getProductId().equals(cartItem.getProductId())){
                 this.products.get(i).setQuantity(this.products.get(i).getQuantity()+cartItem.getQuantity());
             }
+            if(this.products.get(i).getQuantity()==0){
+                this.products.remove(this.products.get(i));
+            }
         }
     }
 

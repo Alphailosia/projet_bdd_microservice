@@ -24,11 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4e3d52ad-dff4-45c6-bf71-9ebb7e561efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/model/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/client/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/order.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +125,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="jdk.selected.JAVA_MODULE" value="corretto-1.8" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/main/resources/templates" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -267,7 +264,7 @@
       </method>
     </configuration>
     <configuration name="order" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="com.example.order.main" />
+      <module name="order.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.order.OrderApplication" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-1.8" />
@@ -324,6 +321,7 @@
       <workItem from="1647506324552" duration="4258000" />
       <workItem from="1647532945336" duration="81000" />
       <workItem from="1647533052713" duration="7399000" />
+      <workItem from="1647589708618" duration="968000" />
     </task>
     <servers />
   </component>

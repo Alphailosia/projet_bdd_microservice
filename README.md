@@ -3,7 +3,9 @@
 Projet de bdd en groupe - Springboot et microservices 
 
 ## Groupe :   
-Desire - Santamaria - Mercuri  
+Stéphané Désiré  
+Sabrina Mercuri  
+Christophe Santamaria  
 
 ## Contenu du projet :  
 

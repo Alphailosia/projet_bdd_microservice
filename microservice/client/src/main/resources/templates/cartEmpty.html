@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/cartStyle.css}"/>
 </head>
 <body>
-<div>
+<div class="menu">
     <a th:href="@{|/|}">
         <img src="https://img2.freepng.fr/20180602/zc/kisspng-home-logo-marc-ronan-sales-representative-owner-c-arab-house-5b12f27985e999.1495639715279683775485.jpg" class="card-img-top" width="50px" high="50px"/>
     </a>
@@ -17,7 +19,7 @@
   Panier de yoplait
 </h1>
 
-<div>
+<div class="contenuVide">
     Aucun produit dans le pannier
 </div>
 

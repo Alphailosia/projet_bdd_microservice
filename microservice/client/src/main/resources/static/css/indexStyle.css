@@ -8,7 +8,7 @@
       margin-top: 50px;
       margin-bottom: 170px;
       font-size: 4em;
-  }
+    }
 
   .menu {
       margin: 5px;
@@ -19,7 +19,7 @@
       width: 60%;
       margin: 0 auto ;
       flex-wrap: wrap;
-      /*justify-content: center;*/
+      justify-content: center;
       text-align: center;
   }
 

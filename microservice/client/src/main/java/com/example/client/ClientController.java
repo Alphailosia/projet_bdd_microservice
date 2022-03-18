@@ -1,6 +1,7 @@
 package com.example.client;
 
 import com.example.client.beans.*;
+import com.example.client.proxies.MsAuthProxy;
 import com.example.client.proxies.MsCartProxy;
 import com.example.client.proxies.MsOrderProxy;
 import com.example.client.proxies.MsProductProxy;
@@ -9,9 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,9 +27,14 @@ public class ClientController {
     @Autowired
     private MsOrderProxy msOrderProxy;
 
+    @Autowired
+    private MsAuthProxy msAuthProxy;
+
     CartBean cartBean;
 
     OrderBean orderBean;
+
+    UserBean userBean;
 
     @Bean
     public CartBean cartBean(){
@@ -42,11 +46,24 @@ public class ClientController {
         return new OrderBean();
     }
 
+    @Bean
+    public UserBean userBean(){ return new UserBean(); }
+
     @RequestMapping("/")
     public String index(Model model) {
-        List<ProductBean> products = msProductProxy.list();
-        model.addAttribute("products", products);
-        return "index";
+        if(userBean==null){
+            userBean = new UserBean("","");
+        }
+        model.addAttribute("userbean",userBean);
+        boolean res = msAuthProxy.authenticate(userBean);
+        if(res){
+            List<ProductBean> products = msProductProxy.list();
+            model.addAttribute("products", products);
+            return "index";
+        }
+        else{
+            return "authpage";
+        }
     }
 
     @RequestMapping("/product-detail/{id}")
@@ -128,7 +145,7 @@ public class ClientController {
         return "confirmation";
     }
 
-    @GetMapping("/addOne/{id}")
+    @RequestMapping("/addOne/{id}")
     public String addOne(@PathVariable Long id, Model model){
         msCartProxy.addProductToCart(cartBean.getId(),new CartItemBean(id,1));
 
@@ -139,7 +156,7 @@ public class ClientController {
         return "cart";
     }
 
-    @GetMapping("/retriveOne/{id}")
+    @RequestMapping("/retriveOne/{id}")
     public String retriveOne(@PathVariable Long id, Model model){
         msCartProxy.addProductToCart(cartBean.getId(),new CartItemBean(id,-1));
 
@@ -151,6 +168,32 @@ public class ClientController {
             return "cartEmpty";
         }
         return "cart";
+    }
+
+    @RequestMapping(value = "/auth", method = RequestMethod.POST)
+    public String auth(@ModelAttribute("userbean") UserBean userBean, Model model){
+        boolean res = msAuthProxy.authenticate(userBean);
+
+        if(res){
+            this.userBean = new UserBean("","");
+            this.userBean.setName(userBean.getName());
+            this.userBean.setPassword(userBean.getPassword());
+            List<ProductBean> products = msProductProxy.list();
+            model.addAttribute("products", products);
+            return "index";
+        }
+        else{
+            return "wrongAuth";
+        }
+    }
+
+    @RequestMapping("/deconnexion")
+    public String deconnexion(Model model){
+        this.userBean.setPassword("");
+        this.userBean.setName("");
+
+        model.addAttribute("userbean",userBean);
+        return "authpage";
     }
 
 }

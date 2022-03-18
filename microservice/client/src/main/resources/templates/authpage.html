@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Connexion</h1>
+
+<form th:action="@{/auth}" th:object="${userbean}" method="post">
+    <input type="text" required th:field="*{name}">
+    <input type="text" required th:field="*{password}">
+    <input type="submit" value="connexion">
+</form>
+</body>
+</html>
